@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ptiringo/japan-commercial-map#readme",
   "devDependencies": {
+    "htmlhint": "^0.9.13",
     "http-server": "^0.10.0"
   }
 }
