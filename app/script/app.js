@@ -9,5 +9,20 @@ initMap = () => {
         zoom: 10
     });
 
-    map.data.loadGeoJson('../api/downtowns/')
+    map.data.loadGeoJson('../api/downtowns/');
+
+    map.data.setStyle(feature => {
+        return {
+            title: feature.getProperty('name'),
+            icon: {
+                path: google.maps.SymbolPath.CIRCLE,
+                fillColor: 'red',
+                fillOpacity: .5,
+                scale: Number(feature.getProperty('annualSalesTurnover')) / 10000,
+                strokeColor: 'white',
+                strokeWeight: .5
+            }
+        };
+    });
+
 };
