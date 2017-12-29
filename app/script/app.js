@@ -11,12 +11,21 @@ initMap = () => {
 
     map.data.loadGeoJson('../api/downtowns/');
 
+    const colors = new Map([
+        [11, 'red'],
+        [12, 'blue'],
+        [13, 'green'],
+        [14, 'black'],
+        [15, 'yellow'],
+    ])
+
+
     map.data.setStyle(feature => {
         return {
             title: feature.getProperty('name'),
             icon: {
                 path: google.maps.SymbolPath.CIRCLE,
-                fillColor: 'red',
+                fillColor: colors.get(feature.getProperty('commercialAccumulationCode')),
                 fillOpacity: .5,
                 scale: Number(feature.getProperty('annualSalesTurnover')) / 10000,
                 strokeColor: 'white',
