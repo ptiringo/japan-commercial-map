@@ -65,5 +65,7 @@ typings/
 # dotenv environment variables file
 .env
 
-
+# parcel
+.cache
+dist/
 
