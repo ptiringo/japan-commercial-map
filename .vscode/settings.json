@@ -4,5 +4,7 @@
     // Markdown
     "[markdown]": {
         "files.trimTrailingWhitespace": false
-    }
+    },
+    // ESLint
+    "eslint.packageManager": "yarn",
 }
