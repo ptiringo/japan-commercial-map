@@ -4,8 +4,8 @@
     "description": "日本の商業集積地区の分布、年間商品販売額を地図上に視覚的に表示します。",
     "main": "index.js",
     "scripts": {
-        "start": "parcel watch ./app/index.html --public-url ./",
-        "build": "parcel build ./app/index.html --public-url ./",
+        "start": "webpack-dev-server",
+        "build": "webpack",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
@@ -24,7 +24,9 @@
         "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.8.0",
         "htmlhint": "^0.9.13",
-        "parcel-bundler": "^1.4.1"
+        "webpack": "^4.7.0",
+        "webpack-cli": "^2.1.2",
+        "webpack-dev-server": "^3.1.4"
     },
     "dependencies": {
         "semantic-ui": "^2.2.13"

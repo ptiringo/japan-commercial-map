@@ -1,3 +1,6 @@
+### app
+app/script/app.js
+
 ### VSCode
 .vscode/*
 !.vscode/settings.json
@@ -64,7 +67,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
-# parcel
-.cache
-dist/
