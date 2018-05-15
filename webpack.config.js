@@ -6,9 +6,5 @@ module.exports = {
     path: path.resolve(__dirname, "app/script"),
     filename: "app.js"
   },
-  mode: "development",
-  devServer: {
-    contentBase: "app",
-    open: true
-  }
+  mode: "development"
 };

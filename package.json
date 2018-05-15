@@ -4,7 +4,7 @@
     "description": "日本の商業集積地区の分布、年間商品販売額を地図上に視覚的に表示します。",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server",
+        "start": "webpack-serve --config ./webpack.config.js",
         "build": "webpack",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -26,7 +26,7 @@
         "htmlhint": "^0.9.13",
         "webpack": "^4.7.0",
         "webpack-cli": "^2.1.2",
-        "webpack-dev-server": "^3.1.4"
+        "webpack-serve": "^1.0.2"
     },
     "dependencies": {
         "semantic-ui": "^2.2.13"
@@ -34,5 +34,10 @@
     "browserslist": [
         "> 1%",
         "last 2 versions"
-    ]
+    ],
+    "serve": {
+        "content": "app",
+        "open": true,
+        "port": 8090
+    }
 }
