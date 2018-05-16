@@ -1,16 +1,16 @@
 version: "3"
 services:
   # frontend
-  jcm-web:
-    container_name: jcm-web
-    image: nginx
-    volumes:
-      - ./dist:/usr/share/nginx/html
-      - ./docker/jcm-web/nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - 80:80
-    depends_on:
-      - jcm-api
+#   jcm-web:
+#     container_name: jcm-web
+#     image: nginx
+#     volumes:
+#       - ./dist:/usr/share/nginx/html
+#       - ./docker/jcm-web/nginx.conf:/etc/nginx/nginx.conf:ro
+#     ports:
+#       - 80:80
+#     depends_on:
+#       - jcm-api
   # Web API
   jcm-api:
     container_name: jcm-api

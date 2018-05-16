@@ -1,3 +1,7 @@
+import "./app.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+
 window.initMap = () => {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: {
