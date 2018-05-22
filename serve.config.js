@@ -2,7 +2,7 @@ const convert = require("koa-connect");
 const proxy = require("http-proxy-middleware");
 
 module.exports = {
-  content: "app",
+  content: "./app",
   open: true,
   port: 8090,
   add: (app, middleware, options) => {

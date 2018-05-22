@@ -11,7 +11,15 @@ window.initMap = () => {
     zoom: 10
   });
 
-  map.data.loadGeoJson("../api/downtowns/");
+  const fetchData = async () => {
+    const resp = await fetch("../api/downtowns/");
+    const json = await resp.json();
+    console.log(json);
+  };
+
+  fetchData();
+
+  // map.data.loadGeoJson("../api/downtowns/");
 
   const colors = new Map([
     [11, "red"],
@@ -21,15 +29,15 @@ window.initMap = () => {
     [15, "yellow"]
   ]);
 
-  map.data.setStyle(feature => ({
-    title: feature.getProperty("name"),
-    icon: {
-      path: google.maps.SymbolPath.CIRCLE,
-      fillColor: colors.get(feature.getProperty("commercialAccumulationCode")),
-      fillOpacity: 0.5,
-      scale: Number(feature.getProperty("annualSalesTurnover")) / 10000,
-      strokeColor: "white",
-      strokeWeight: 0.5
-    }
-  }));
+  // map.data.setStyle(feature => ({
+  //   title: feature.getProperty("name"),
+  //   icon: {
+  //     path: google.maps.SymbolPath.CIRCLE,
+  //     fillColor: colors.get(feature.getProperty("commercialAccumulationCode")),
+  //     fillOpacity: 0.5,
+  //     scale: Number(feature.getProperty("annualSalesTurnover")) / 10000,
+  //     strokeColor: "white",
+  //     strokeWeight: 0.5
+  //   }
+  // }));
 };
