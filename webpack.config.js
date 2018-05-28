@@ -1,4 +1,6 @@
 const path = require("path");
+const convert = require("koa-connect");
+const proxy = require("http-proxy-middleware");
 
 module.exports = {
   entry: "./src/index.js",
@@ -7,6 +9,14 @@ module.exports = {
     filename: "app.js"
   },
   mode: "development",
+  serve: {
+    content: "./app",
+    open: true,
+    port: 8090,
+    add: (app, middleware, options) => {
+      app.use(convert(proxy("/api", { target: "http://localhost:8080" })));
+    }
+  },
   module: {
     rules: [
       {
