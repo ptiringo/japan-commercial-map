@@ -14,13 +14,11 @@ window.initMap = () => {
   (async () => {
     const resp = await fetch("../api/downtowns/");
     const json = await resp.json();
-    // json.
     json.features.forEach(f => {
       new google.maps.Marker({
         label: {
-          color: "#DDDDDD",
-          fontSize: "3px",
-          text: String(f.properties.annualSalesTurnover)
+          color: "#EEE",
+          text: String(Math.floor(f.properties.annualSalesTurnover / 1000))
         },
         position: {
           lat: f.geometry.coordinates[1],
@@ -30,14 +28,5 @@ window.initMap = () => {
         map: map
       });
     });
-    console.log(json.features);
   })();
-
-  const colors = new Map([
-    [11, "red"],
-    [12, "blue"],
-    [13, "green"],
-    [14, "black"],
-    [15, "yellow"]
-  ]);
 };
