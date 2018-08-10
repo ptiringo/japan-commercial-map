@@ -1,6 +1,6 @@
 # 日本商業集積地区マップ [![Build Status](https://travis-ci.org/ptiringo/japan-commercial-map.svg?branch=master)](https://travis-ci.org/ptiringo/japan-commercial-map)
 
-## 本誌ステムの目的
+## 本システムの目的
 
 日本の商業集積地区の分布、年間商品販売額を地図上に視覚的に表示します。
 
